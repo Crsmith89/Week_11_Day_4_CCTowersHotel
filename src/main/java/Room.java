@@ -15,11 +15,15 @@ public abstract class Room {
     }
 
 
-    public void addGuest(Guest guest) {
-        if (capacity < guests.size()) {
+    public boolean addGuest(Guest guest) {
+        if (guests.size() < capacity) {
             this.guests.add(guest);
+            return true;
+        } else {
+            return false;
         }
     }
+
     public void removeGuest(Guest guest){
         this.guests.remove(guest);
         }
