@@ -15,4 +15,19 @@ public class BedroomTest {
     public void getRoomCapacity(){
         assertEquals(2, bedroom.getCapacity());
     }
+
+    @Test
+    public void roomHasCorrectType(){
+        assertEquals(RoomType.DOUBLE, bedroom.getRoomType());
+    }
+
+    @Test
+    public void roomTypeCheckCapacity(){
+        assertEquals(bedroom.getCapacity(), bedroom.getRoomTypeValue());
+    }
+
+    @Test
+    public void roomHasCorrectNumber(){
+        assertEquals(3, bedroom.getRoomNumber());
+    }
 }

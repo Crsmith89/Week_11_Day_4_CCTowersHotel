@@ -19,4 +19,8 @@ public class Bedroom extends Room {
     public RoomType getRoomType(){
         return roomType;
     }
+
+    public int getRoomTypeValue(){
+        return roomType.getValue();
+    }
 }
