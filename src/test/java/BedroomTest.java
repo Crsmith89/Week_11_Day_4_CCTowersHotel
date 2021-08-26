@@ -8,7 +8,7 @@ public class BedroomTest {
 
     @Before
     public void before(){
-        bedroom = new Bedroom(2, 3, RoomType.DOUBLE);
+        bedroom = new Bedroom(2, 3, RoomType.DOUBLE, 50);
     }
 
     @Test

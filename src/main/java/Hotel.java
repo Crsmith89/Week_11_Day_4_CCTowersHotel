@@ -35,4 +35,10 @@ public class Hotel {
     public boolean checkGuestIntoConferenceRoom(Guest guest, ConferenceRoom conferenceRoom){
         return conferenceRoom.addGuest(guest);
     }
+
+    public Booking bookRoom(Bedroom bedroom, int numberOfNights){
+        Booking booking;
+        booking = new Booking(bedroom, numberOfNights);
+        return booking;
+    }
 }
