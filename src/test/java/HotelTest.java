@@ -51,8 +51,14 @@ public class HotelTest {
         assertEquals(true, testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom));
     }
 
-//    @Test //check that the hotel cannot add to conference room when its full
-//    public void hotelCannotCheckIntoConferenceRoomWhenItIsFull(){
-//        test
-//    }
+    @Test //check that the hotel cannot add to conference room when its full
+    public void hotelCannotCheckIntoConferenceRoomWhenItIsFull(){
+        testHotel.addConferenceRoom(testConferenceRoom);
+        testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom);
+        testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom);
+        testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom);
+        testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom);
+        testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom);
+        assertEquals(false, testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom));
+    }
 }
