@@ -27,4 +27,12 @@ public class Hotel {
     public boolean checkGuestIntoBedroom(Guest guest, Bedroom bedroom){
         return bedroom.addGuest(guest);
     }
+
+    public void addConferenceRoom(ConferenceRoom conferenceRoom){
+        this.conferenceRooms.add(conferenceRoom);
+    }
+
+    public boolean checkGuestIntoConferenceRoom(Guest guest, ConferenceRoom conferenceRoom){
+        return conferenceRoom.addGuest(guest);
+    }
 }

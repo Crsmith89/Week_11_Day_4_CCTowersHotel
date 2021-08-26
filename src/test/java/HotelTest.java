@@ -7,12 +7,14 @@ public class HotelTest {
 
     Hotel testHotel;
     Bedroom testBedroom;
+    ConferenceRoom testConferenceRoom;
     Guest testGuy;
 
     @Before
     public void before() {
         testHotel = new Hotel("CC Towers");
         testBedroom = new Bedroom(4, 16, RoomType.FAMILY);
+        testConferenceRoom = new ConferenceRoom(5, "Conference Room");
         testGuy = new Guest("Fekky");
     }
 
@@ -45,7 +47,12 @@ public class HotelTest {
 
     @Test
     public void hotelCanCheckGuestIntoConferenceRoomTrue() {
-        testHotel.addBedroom(testBedroom);
-        assertEquals(true, testHotel.checkGuestIntoBedroom(testGuy, testBedroom));
+        testHotel.addConferenceRoom(testConferenceRoom);
+        assertEquals(true, testHotel.checkGuestIntoConferenceRoom(testGuy, testConferenceRoom));
     }
+
+//    @Test //check that the hotel cannot add to conference room when its full
+//    public void hotelCannotCheckIntoConferenceRoomWhenItIsFull(){
+//        test
+//    }
 }
